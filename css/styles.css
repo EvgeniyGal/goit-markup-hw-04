@@ -1,0 +1,409 @@
+:root {
+  --iris: #4d5ae5;
+  --navyblue: #2e2f42;
+  --cornflower: #e7e9fc;
+  --ocean: #404bbf;
+  --navyblue: #2e2f42;
+  --cloud: #f4f4fd;
+  --white: #ffffff;
+  --slate: #434455;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--white);
+  color: var(--slate);
+}
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.paragraph {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+}
+
+.address-section {
+  font-style: normal;
+  margin-left: auto;
+}
+
+.address-section .link {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+}
+
+.address-section .link:hover,
+.link:focus {
+  color: var(--ocean);
+}
+
+.address-section .list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.address-list .item {
+  width: calc(100% - 72px) / 4;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--iris);
+  background-color: var(--cloud);
+  border: 1px solid var(--cornflower);
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--ocean);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.portfolio-item-heading {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--navyblue);
+}
+
+.portfolio-item-type {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+}
+
+.page-footer {
+  padding: 100px 0;
+  background-color: var(--navyblue);
+}
+
+.page-footer .container {
+  flex-direction: column;
+}
+
+.page-footer .logo {
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.page-footer .logo .general {
+  color: var(--iris);
+  font-size: 18px;
+}
+
+.page-footer .logo .accent {
+  color: var(--cloud);
+  font-size: 18px;
+}
+
+.page-footer .paragraph {
+  color: var(--cloud);
+  max-width: 264px;
+}
+
+.main-section {
+  background-color: var(--navyblue);
+  padding: 188px 0;
+}
+
+.main-section .first-heading {
+  margin: 0 auto 48px auto;
+  max-width: 496px;
+}
+
+.main-section .button {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main-section .button:hover,
+.button:focus {
+  background-color: var(--ocean);
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.section-fone {
+  background-color: var(--cloud);
+}
+
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.first-heading {
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+
+.second-heading {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: var(--navyblue);
+}
+
+.thitd-heading {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--navyblue);
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+.button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  background-color: var(--iris);
+  cursor: pointer;
+}
+
+.page-header {
+  border-bottom: 1px solid var(--cornflower);
+}
+
+.page-header .container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-section {
+  display: flex;
+  align-items: center;
+}
+
+.nav-section .logo {
+  margin-right: 76px;
+}
+
+.nav-section .logo .general {
+  color: var(--iris);
+  font-size: 18px;
+}
+
+.nav-section .logo .accent {
+  color: var(--navyblue);
+  font-size: 18px;
+}
+
+.nav-section .list {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-section .list .item {
+  padding: 24px 0;
+}
+
+.nav-section .list .link:hover,
+.link:focus {
+  color: var(--ocean);
+}
+
+.nav-section .list .link {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.32px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--navyblue);
+  padding: 24px 0;
+}
+
+.benefits-section .item .thitd-heading {
+  margin-bottom: 8px;
+}
+
+.benefits-section .item .paragraph {
+  color: var(--slate);
+}
+
+.benefits-section {
+  padding: 120px 0;
+}
+
+.benefits-section .list {
+  display: flex;
+  gap: 24px;
+}
+
+.benefits-section .list .item {
+  flex-basis: calc((100% - 72px) / 4);
+}
+
+.doing-section {
+  padding-bottom: 120px;
+}
+
+.doing-section .second-heading {
+  margin-bottom: 72px;
+  text-align: center;
+}
+
+.doing-section .list {
+  display: flex;
+  gap: 24px;
+}
+
+.doing-section .list .item {
+  flex-basis: calc((100% - 72px) / 3);
+}
+
+.team-section {
+  padding: 120px 0;
+  background-color: var(--cloud);
+}
+
+.team-section .second-heading {
+  margin-bottom: 72px;
+  text-align: center;
+}
+
+.team-section .list {
+  display: flex;
+  gap: 24px;
+}
+
+.team-section .list .item {
+  width: calc((100% - 72px) / 4);
+  border-radius: 0 0 4px 4px;
+  background: var(--white);
+}
+
+.team-section .text-container {
+  padding: 32px 0;
+}
+
+.team-section .thitd-heading {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.team-section .paragraph {
+  text-align: center;
+}
+
+.portfolio-section {
+  padding: 96px 0 120px 0;
+}
+
+.portfolio-manu {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 72px;
+}
+
+.portfolio-manu .button {
+  padding: 12px 24px;
+  border: 1px solid --cornflower;
+  border-radius: 4px;
+  background: var(--cloud);
+  color: var(--iris);
+}
+
+.portfolio-manu .button:hover,
+button:focus {
+  border: 1px solid transparent;
+  background-color: var(--ocean);
+  color: var(--white);
+}
+
+.portfolio-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 48px;
+}
+
+.portfolio-content .item {
+  width: calc((100% - 48px) / 3);
+}
+
+.portfolio-content .text-container {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
+.portfolio-content .thitd-heading {
+  margin-bottom: 8px;
+}

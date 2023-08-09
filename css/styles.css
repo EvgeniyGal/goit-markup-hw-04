@@ -52,6 +52,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-section .link:hover,
@@ -151,6 +152,8 @@ body {
 
 .page-footer .paragraph {
   color: var(--white);
+  font-weight: 500;
+  margin-bottom: 16px;
 }
 
 .page-footer .list {
@@ -168,8 +171,11 @@ body {
   justify-content: center;
 }
 
-.page-footer .list .icon-box:hover,
-.icon-box:focus {
+.page-footer .list .icon-box:hover {
+  background-color: var(--footer-icon-fiil);
+}
+
+.page-footer .list .icon-box:focus {
   background-color: var(--footer-icon-fiil);
 }
 
@@ -448,6 +454,12 @@ img {
   justify-content: space-around;
   justify-content: center;
   font-size: 0;
+  gap: 24px;
+}
+
+.icon-size {
+  width: 40px;
+  height: 40px;
 }
 
 .team-section .social-list .icon-box {
@@ -527,6 +539,11 @@ img {
   border-radius: 4px;
   background: var(--cloud);
   color: var(--iris);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-manu .button:hover,
@@ -623,29 +640,48 @@ button:focus {
 }
 
 .backdrop .blank {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   left: calc(50% - 204px);
   top: 80px;
   border-radius: 4px;
   background: var(--dairy, #fcfcfc);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop .close-button {
-  position: absolute;
-  border-radius: 50%;
-  padding: 8px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--cornflower);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop .close-button:hover,
+.close-button:hover {
+  background-color: #404bbf;
   border: none;
-  right: 24px;
-  top: 24px;
 }
 
 .backdrop .close-button .icon {
   fill: var(--navyblue);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop .close-button .icon:hover,
+.icon:focus {
+  fill: var(--white);
 }
 
 .is-hidden {

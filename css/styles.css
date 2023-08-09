@@ -678,7 +678,7 @@ img {
 
 .backdrop .close-button:hover .icon,
 .backdrop .close-button:hover .icon {
-  fill: #ffffff;
+  fill: var(--white);
 }
 
 .is-hidden {

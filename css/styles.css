@@ -8,6 +8,7 @@
   --white: #ffffff;
   --slate: #434455;
   --lite-slate: #8e8f99;
+  --footer-icon-fiil: #31d0aa;
 }
 
 body {
@@ -121,7 +122,11 @@ body {
 
 .page-footer .container {
   display: flex;
-  gap: 120px;
+  align-items: baseline;
+}
+
+.page-footer .logo-section {
+  margin-right: 120px;
 }
 
 .page-footer .logo {
@@ -139,16 +144,13 @@ body {
   font-size: 18px;
 }
 
-.page-footer .paragraph {
+.page-footer .logo-section .paragraph {
   color: var(--cloud);
   max-width: 264px;
 }
 
-.page-footer .thitd-heading {
-  color: var(--cloud);
-  margin-bottom: 16px;
-  font-size: 16px;
-  line-height: 1.5;
+.page-footer .paragraph {
+  color: var(--white);
 }
 
 .page-footer .list {
@@ -157,14 +159,22 @@ body {
 }
 
 .page-footer .list .icon-box {
-  display: inline-block;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
   background-color: var(--iris);
-  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-footer .list .icon-box:hover,
+.icon-box:focus {
+  background-color: var(--footer-icon-fiil);
 }
 
 .page-footer .list .icon {
-  fill: var(--white);
+  fill: var(--cloud);
 }
 
 .main-section {
@@ -436,19 +446,28 @@ img {
 .team-section .social-list {
   display: flex;
   justify-content: space-around;
+  justify-content: center;
   font-size: 0;
 }
 
 .team-section .social-list .icon-box {
-  display: inline-block;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
   background-color: var(--iris);
-  padding: 12px;
-  margin-bottom: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-section .social-list .icon-box:hover,
+.icon-box:focus {
+  background-color: var(--ocean);
 }
 
 .team-section .social-list .icon {
-  fill: var(--white);
+  fill: var(--cloud);
 }
 
 .customers-section {
@@ -467,17 +486,28 @@ img {
 
 .customers-section .list .item {
   flex-basis: calc((100% - 120px) / 6);
+  height: 88px;
 }
 
 .customers-icon-box {
-  display: flex;
-  justify-content: center;
-  padding: 16px 0;
+  width: 100%;
+  height: 100%;
   border: 1px solid var(--lite-slate);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lite-slate);
+}
+
+.customers-icon-box:hover,
+.customers-icon-box:focus {
+  color: var(--ocean);
+  border-color: var(--ocean);
 }
 
 .customers-icon {
-  fill: var(--lite-slate);
+  fill: currentColor;
 }
 
 .portfolio-section {
@@ -500,6 +530,12 @@ img {
 }
 
 .portfolio-manu .button:hover,
+.button:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-manu .button:hover,
 button:focus {
   border: 1px solid transparent;
   background-color: var(--ocean);
@@ -517,6 +553,16 @@ button:focus {
   width: calc((100% - 48px) / 3);
   position: relative;
   overflow: hidden;
+}
+
+.portfolio-content .item .link {
+  display: block;
+}
+
+.portfolio-content .item .link:hover,
+.link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-content .item .overlay {
@@ -572,6 +618,8 @@ button:focus {
   left: 0px;
   border-radius: 4px;
   font-size: 0px;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop .blank {
@@ -602,4 +650,6 @@ button:focus {
 
 .is-hidden {
   visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
